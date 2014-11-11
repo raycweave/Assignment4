@@ -10,10 +10,7 @@
 /**************************************************************************************************/
 
 #include "Visit.h"
-#include "GPSIMUState.h"
-#include "Location.h"
-#include "NMEAParser.h"
-#include "VehicleJourney.h"
+
 #include <algorithm>
 #include <iostream>
 #include <cstdlib>

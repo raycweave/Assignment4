@@ -4,15 +4,14 @@
 * File: main.cpp
 * Author: Ray Weaver
 * NetID: rayweaver
-* Date: November 4, 2014
+* Date: November 20, 2014
 */
 
 /**************************************************************************************************/
 
 /**************************************************************************************************/
-/*							Assignment 3
-*	This program analyzes the data that a gps unit has recorded. By analyzing this data we find	
-*	where an object has traveled in a time period.
+/*							Assignment 4
+*	
 *
 */
 /**************************************************************************************************/
@@ -24,8 +23,6 @@
 #include <cstdlib>
 #include <cstdio>
 
-#include "NMEAParser.h"
-#include "VehicleJourney.h"
 #include "Visit.h"
 
 using namespace std;
@@ -42,6 +39,9 @@ int main(int argc, char *argv [])
 	* provide a simple usage message to the assist the user
 	*/
 
+	cout << "Beginning tests." << endl;
+
+	/*
 	if (argc != 3) {
 		cerr << "Usage: " << argv[0] << " logFile outputFile" << endl;
 		return -1;
@@ -63,7 +63,7 @@ int main(int argc, char *argv [])
 	else {
 		cerr << "The file " << argv[1] << " cannot open or is empty" << endl;
 		return -1;
-	}
+	}*/
 	
 	return 0;
 }

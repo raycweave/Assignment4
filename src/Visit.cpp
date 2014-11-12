@@ -17,7 +17,6 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
-
 using namespace std;
 
 
@@ -25,12 +24,14 @@ Visit::Visit(void) {
 	location = "";
 	startTime = 0.0;
 	endTime = 0.0;
-
 	return;
 }
 
 Visit::~Visit(void) { }
 
+/*
+need to test
+*/
 Visit::Visit(string location, double startTime, double endTime) {
 	this->location = location;
 	this->startTime = startTime;
@@ -43,12 +44,15 @@ Visit::Visit(string location, double startTime, double endTime) {
 Compares two vector elements by name, and ascii orders them by which is less than
 */
 bool Visit::compare(Visit* v1, Visit* v2) {
-	if (v1->getLocation() < v2->getLocation()) {
+	if (v1->getLocation() < v2->getLocation()) 
+	{
 		return true;
 	}
 
-	else if (v1->getLocation() == v2->getLocation()) {
-		if (v1->getStartTime() < v2->getStartTime()) {
+	else if (v1->getLocation() == v2->getLocation()) 
+	{
+		if (v1->getStartTime() < v2->getStartTime()) 
+		{
 			return true;
 		}
 		else 
@@ -56,7 +60,9 @@ bool Visit::compare(Visit* v1, Visit* v2) {
 			return false;
 		}
 	}
-	else {
+
+	else 
+	{
 		return false;
 	}
 
@@ -70,6 +76,15 @@ string Visit::getVisitString() const {
 
 	 ostringstream outFS;
 	 int i = 0;
+
+	 if (this->state.size() == 0) {
+		 outFS << "States: ERROR!" << endl;
+	 }
+
+
+	 if (this->getLocation() == "") {
+		 outFS << "ERROR!" << endl; 
+	 }
 
 	 outFS << this->getLocation() << endl;
 	 outFS << setprecision(8) << this->getStartTime() << " to " << this->getEndTime() << endl;

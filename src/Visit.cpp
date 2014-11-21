@@ -4,7 +4,7 @@
 * File: Visit.cpp
 * Author: Ray Weaver
 * NetID: rayweaver
-* Date: November 4, 2014
+* Date: November 20, 2014
 */
 
 /**************************************************************************************************/
